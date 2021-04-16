@@ -1,0 +1,369 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #dbd9ff;
+  background: radial-gradient(circle, rgba(219, 217, 255, 0.840074) 0%, rgba(66, 9, 121, 0.884892) 51%, rgba(0, 0, 0, 0.758841) 100%);
+}
+
+span {
+  margin-right: 5px;
+}
+
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0.535);
+  padding: 10px;
+}
+
+#empty {
+  background-color: transparent;
+  cursor: auto;
+}
+
+.game_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 5px;
+  width: 100px;
+  height: 100px;
+  font-size: 32px;
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  color: white;
+  text-shadow: black 2px 2px 3px, black -2px -2px 3px,  black -2px 2px 3px, black 2px -2px 3px;
+}
+
+.change-colour {
+  background-color: #fff;
+}
+
+.all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 15px 0;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  font-size: 18px;
+  outline: none;
+  background-color: rgba(22, 34, 53, 0.85);
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+.soundButton {
+  width: 50px;
+  padding-top: 5px;
+}
+
+p {
+  font-size: 32px;
+}
+
+.timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 22px;
+}
+
+.slideUp {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: all 100ms cubic-bezier(0.25, 0.25, 0.25, 0.25);
+  transition: all 100ms cubic-bezier(0.25, 0.25, 0.25, 0.25);
+  /* linear */
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.25, 0.25, 0.25);
+  transition-timing-function: cubic-bezier(0.25, 0.25, 0.25, 0.25);
+  /* linear */
+}
+
+.slideDown {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transition: all 100ms cubic-bezier(0.25, 0.25, 0.25, 0.25);
+  transition: all 100ms cubic-bezier(0.25, 0.25, 0.25, 0.25);
+  /* linear */
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.25, 0.25, 0.25);
+  transition-timing-function: cubic-bezier(0.25, 0.25, 0.25, 0.25);
+  /* linear */
+}
+
+.slideRight {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: all 100ms cubic-bezier(0.25, 0.25, 0.25, 0.25);
+  transition: all 100ms cubic-bezier(0.25, 0.25, 0.25, 0.25);
+  /* linear */
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.25, 0.25, 0.25);
+  transition-timing-function: cubic-bezier(0.25, 0.25, 0.25, 0.25);
+  /* linear */
+}
+
+.slideLeft {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: all 100ms cubic-bezier(0.25, 0.25, 0.25, 0.25);
+  transition: all 100ms cubic-bezier(0.25, 0.25, 0.25, 0.25);
+  /* linear */
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.25, 0.25, 0.25);
+  transition-timing-function: cubic-bezier(0.25, 0.25, 0.25, 0.25);
+  /* linear */
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 50;
+}
+
+.congrads {
+  font-size: 28px;
+  width: 420px;
+  height: 420px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+#settings {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: -200%;
+  left: 50%;
+  margin-left: -125px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 250px;
+  height: 460px;
+  z-index: 100;
+  background-color: white;
+  -webkit-transition: top 1s linear;
+  transition: top 1s linear;
+}
+
+#settings button {
+  width: 200px;
+}
+
+#congradulations {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: -200%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 460px;
+  height: 460px;
+  padding: 10px;
+  text-align: center;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-transition: top 1s linear;
+  transition: top 1s linear;
+}
+
+#topScore {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: -200%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 320px;
+  left: 50%;
+  margin-left: -160px;
+  height: 500px;
+  overflow-y: scroll;
+  padding: 10px;
+  text-align: center;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.95);
+  -webkit-transition: top 1s linear;
+  transition: top 1s linear;
+}
+
+#settings.settings-open,
+#congradulations.settings-open,
+#topScore.settings-open {
+  top: 50%;
+  margin-top: -230px;
+  -webkit-transition: top 1.5s linear;
+  transition: top 1.5s linear;
+}
+
+#topScore.settings-open {
+  padding-top: 30px;
+}
+
+.selectSize {
+  font-size: 22px;
+  margin-bottom: 5px;
+  width: 200px;
+  text-align-last: center;
+  background-color: rgba(22, 34, 53, 0.85);
+  color: white;
+}
+
+ol {
+  width: 200px;
+  font-size: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+li {
+  margin-top: 10px;
+}
+
+li::marker {
+  font-weight: bold;
+}
+
+li span {
+  margin-left: 25px;
+}
+
+@media screen and (max-width: 1500px) {
+  .game_block {
+    margin: 3px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .box {
+    padding: 5px;
+  }
+  .soundButton {
+    width: 40px;
+    height: 40px;
+    padding-top: 5px;
+  }
+  button {
+    width: 70px;
+    font-size: 16px;
+  }
+  .timer {
+    font-size: 18px;
+  }
+  .game_block {
+    font-size: 22px;
+  }
+  #congradulations {
+    font-size: 20px;
+    width: 280px;
+    height: 420px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  #congradulations p {
+    font-size: 20px;
+  }
+  #congradulations button {
+    width: 100px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
